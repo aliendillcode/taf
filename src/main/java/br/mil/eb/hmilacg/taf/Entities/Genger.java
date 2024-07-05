@@ -13,12 +13,12 @@ import lombok.Setter;
 public class Genger {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "g_id")
+    @Column(name = "id")
     private Integer id;
-    @Column(name="g_description")
+    @Column(name="description")
     private String description;
-    @Column(name = "g_short")
-    private String g_short;
+    @Column(name = "shortening")
+    private String shortening;
 
 
 

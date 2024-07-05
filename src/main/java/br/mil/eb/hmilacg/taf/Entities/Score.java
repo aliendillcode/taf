@@ -13,10 +13,10 @@ import lombok.Setter;
 public class Score {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "s_id")
+    @Column(name = "id")
     private Integer id;
-    @Column(name = "s_description")
+    @Column(name = "description")
     private String description;
-    @Column(name = "s_short")
-    private String s_short;
+    @Column(name = "short")
+    private String shortening;
 }
