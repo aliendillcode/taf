@@ -1,28 +1,20 @@
 package br.mil.eb.hmilacg.taf.Entities;
 
 import jakarta.persistence.*;
-import jdk.jfr.Description;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Entity
-@Table(name = "run")
-@Getter
-@Setter
-@NoArgsConstructor
-public class Run {
+@Table(name = "plank")
+public class Plank {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "r_id")
+    @Column(name = "p_id")
     private Long id;
-    @Column(name = "r_age_min")
+    @Column(name = "p_age_min")
     private Integer age_min;
-    @Column(name = "r_age_max")
+    @Column(name = "p_age_max")
     private Integer age_max;
-    @Column(name = "r_index_min")
+    @Column(name = "p_index_min")
     private Integer index_min;
-    @Column(name = "r_index_max")
+    @Column(name = "p_index_max")
     private Integer index_max;
 
     @ManyToOne
@@ -36,6 +28,4 @@ public class Run {
     @ManyToOne
     @JoinColumn(name = "score_s_id")
     private Score score;
-
-
 }
